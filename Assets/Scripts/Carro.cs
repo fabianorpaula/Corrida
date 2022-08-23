@@ -10,6 +10,8 @@ public class Carro : MonoBehaviour
     public int indice = 0;
     public float velocidade = 10;
     public float tempo = 0;
+    public int volta = 0;
+    public string nome;
    
     void Start()
     {
@@ -38,5 +40,22 @@ public class Carro : MonoBehaviour
         }
 
         
+    }
+
+
+    public string MostraVelocidade()
+    {
+        string vel = Agente.speed.ToString();
+        return vel;
+    }
+    public string MostraVolta()
+    {
+        string vel = Agente.speed.ToString();
+        return vel;
+    }
+    public string MostraNome()
+    {
+        string vel = Agente.speed.ToString();
+        return vel;
     }
 }
