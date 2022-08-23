@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class UI_Carro : MonoBehaviour
 {
+    //Declarando Variaveis
     public Text mostraNome;
     public Text mostraVolta;
     public Text mostraVelocidade;
@@ -18,6 +19,8 @@ public class UI_Carro : MonoBehaviour
     
     void Update()
     {
-        
+        mostraNome.text = MeuCarro.MostraNome();
+        mostraVolta.text = MeuCarro.MostraVelocidade() +  " Km/h";
+        mostraVolta.text = "Volta: " + MeuCarro.MostraVolta();
     }
 }

@@ -50,12 +50,11 @@ public class Carro : MonoBehaviour
     }
     public string MostraVolta()
     {
-        string vel = Agente.speed.ToString();
-        return vel;
+        string volt = volta.ToString();
+        return volt;
     }
     public string MostraNome()
     {
-        string vel = Agente.speed.ToString();
-        return vel;
+        return name;
     }
 }
