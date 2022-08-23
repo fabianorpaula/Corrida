@@ -35,7 +35,7 @@ public class Carro : MonoBehaviour
         if (tempo > 5)
         {
             tempo = 0;
-            velocidade = Random.Range(9, 16);
+            velocidade = Random.Range(18, 35);
             Agente.speed = velocidade;
         }
 
@@ -56,5 +56,14 @@ public class Carro : MonoBehaviour
     public string MostraNome()
     {
         return name;
+    }
+
+
+    private void OnTriggerExit(Collider tocou)
+    {
+        if(tocou.gameObject.tag == "Bandeira")
+        {
+            volta++;
+        }
     }
 }
