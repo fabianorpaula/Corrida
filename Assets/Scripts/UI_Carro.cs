@@ -20,7 +20,7 @@ public class UI_Carro : MonoBehaviour
     void Update()
     {
         mostraNome.text = MeuCarro.MostraNome();
-        mostraVolta.text = MeuCarro.MostraVelocidade() +  " Km/h";
+        mostraVelocidade.text = MeuCarro.MostraVelocidade() +  " Km/h";
         mostraVolta.text = "Volta: " + MeuCarro.MostraVolta();
     }
 }
