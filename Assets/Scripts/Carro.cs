@@ -58,7 +58,7 @@ public class Carro : MonoBehaviour
         return name;
     }
 
-
+    //Permite Contar Volta
     private void OnTriggerExit(Collider tocou)
     {
         if(tocou.gameObject.tag == "Bandeira")
