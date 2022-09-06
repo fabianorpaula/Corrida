@@ -12,6 +12,9 @@ public class Carro : MonoBehaviour
     public float tempo = 0;
     public int volta = 0;
     public string nome;
+    public float dist;
+    public int posA;
+    public Gerenciador GJ;
    
     void Start()
     {
@@ -38,8 +41,8 @@ public class Carro : MonoBehaviour
             velocidade = Random.Range(18, 35);
             Agente.speed = velocidade;
         }
-
-        
+        minhaDistancia();
+        posA = GJ.PosCarro(dist);
     }
 
 
@@ -64,6 +67,25 @@ public class Carro : MonoBehaviour
         if(tocou.gameObject.tag == "Bandeira")
         {
             volta++;
+            if(volta > 1)
+            {
+                GJ.Vitoria();
+            }
         }
+    }
+
+
+    public void minhaDistancia()
+    {
+        float minhaV = volta * 10000;
+        float minhaW = indice * 100;
+        int novoI = indice - 1;
+        if(novoI < 0)
+        {
+            novoI = Destinos.Count - 1;
+        }
+        float minhaP = Vector3.Distance(transform.position, Destinos[novoI].transform.position);
+
+        dist = minhaV + minhaW + minhaP;
     }
 }
